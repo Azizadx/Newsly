@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">newsly</string>
+    <string name="welcome_to_newsly">Welcome To Newsly 👋</string>
+    <string name="Signup_subtitle">Hello, I guess you are new around here. You can start using the application after sign up.</string>
+    <string name="username">Username</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>
