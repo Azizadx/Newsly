@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="20dp"
+    tools:context=".ui.main.view.SignUpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:paddingTop="20dp"
+        android:text="@string/welcome_to_newsly" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_light_green"
+        android:paddingTop="3dp"
+        android:paddingBottom="30dp"
+        android:text="@string/Signup_subtitle" />
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        style="@style/edit_text"
+        android:background="@drawable/rounded_edit_text_focused"
+        android:ems="1"
+        android:hint="@string/username"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:inputType="textPersonName"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        style="@style/edit_text"
+        android:background="@drawable/rounded_edit_text_focused"
+        android:hint="@string/email_address"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        style="@style/edit_text"
+        android:background="@drawable/rounded_edit_text_focused"
+        android:hint="@string/password"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:inputType="textPassword"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextRepeatPassword"
+        style="@style/edit_text"
+        android:background="@drawable/rounded_edit_text_focused"
+        android:hint="@string/repeat_password"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:inputType="textPassword"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        style="@style/green_button"
+        android:background="@drawable/rounded_button"
+        android:text="@string/sign_up"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textColor="@color/primary_light_green"
+            android:text="@string/already_have_an_account"/>
+
+        <TextView
+            android:id="@+id/textSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/sign_in"/>
+
+    </LinearLayout>
+</LinearLayout>
