@@ -11,4 +11,6 @@
     <!-- NEWSLY COLORS-->
     <color name="primary_green">#52DF82</color>
     <color name="primary_light_green">#96D794</color>
+   <color name="primary_white">#FFFFFFFF</color>
+
 </resources>
