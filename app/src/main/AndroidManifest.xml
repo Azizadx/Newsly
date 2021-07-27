@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/newsl_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/newsl_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Newsly">
         <activity android:name=".ui.main.view.base.BaseActivity"/>
