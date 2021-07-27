@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OnboardingActivity extends AppCompatActivity {
-
+    private Button nextbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,16 @@ public class OnboardingActivity extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.onboarding2));
         imageSlider.setImageList(slideModels,true);
 
+  nextbtn=findViewById(R.id.nextButton);
+        nextbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+           public void onClick(View v) {
 
+                Intent intent = new Intent (OnboardingActivity.this, WelcomeScreenActivity.class);
+
+                startActivity(intent);
+            }
+        });
 
     }
 
