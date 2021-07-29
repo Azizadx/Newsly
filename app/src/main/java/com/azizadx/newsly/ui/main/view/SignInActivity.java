@@ -18,6 +18,9 @@ import com.azizadx.newsly.ui.main.view.base.BaseActivity;
 public class SignInActivity extends BaseActivity implements View.OnTouchListener {
     private EditText email, pass;
 
+    //Button btnGoogleSignin = findViewById(R.id.buttonGoogle);
+    //Button btnFbSignin = findViewById(R.id.buttonFb);
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class SignInActivity extends BaseActivity implements View.OnTouchListener
        Intent intent = new Intent(this, SignUpActivity.class);
        startActivity(intent);
     }
+
 
     @SuppressLint("ClickableViewAccessibility")
     @Override

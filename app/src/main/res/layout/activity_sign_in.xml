@@ -54,6 +54,35 @@
         android:background="@drawable/rounded_button"
         android:text="@string/sign_in"/>
 
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:layout_width="17dp"
+        android:layout_height="24dp"
+        android:text="@string/or"
+        android:textSize="64px"
+        android:textColor="@android:color/darker_gray"
+        android:textAlignment="center"/>
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <Button
+        android:id="@+id/buttonGoogle"
+        style="@style/transparent_button"
+        android:background="@drawable/rounded_button"
+        android:text="@string/google_sign_in"/>
+
+    <Button
+        android:id="@+id/buttonFb"
+        style="@style/transparent_button"
+        android:background="@drawable/rounded_button"
+        android:text="@string/fb_sign_in"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
