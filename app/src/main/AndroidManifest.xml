@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Newsly">
-        <activity android:name=".ui.main.view.WelcomeScreenActivity"></activity>
+        <activity android:name=".ui.main.view.BottomNavBar"></activity>
+        <activity android:name=".ui.main.view.BookmarksEmptyStateActivity" />
+       <!-- <activity android:name=".ui.main.view.WelcomeScreenActivity" />-->
         <activity android:name=".ui.main.view.OnboardingActivity" />
         <activity android:name=".ui.main.view.SignUpActivity" />
         <activity android:name=".ui.main.view.base.BaseActivity" />
