@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/newsl_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Newsly">
-        <activity android:name=".ui.main.view.SignUpActivity"></activity>
+        <activity android:name=".ui.main.view.OnboardingActivity"></activity>
+        <activity android:name=".ui.main.view.SignUpActivity" />
         <activity android:name=".ui.main.view.base.BaseActivity" />
         <activity android:name=".ui.main.view.SplashScreenActivity">
             <intent-filter>
@@ -18,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.view.MainActivity"></activity>
+        <activity android:name=".ui.main.view.MainActivity" />
     </application>
 
 </manifest>
