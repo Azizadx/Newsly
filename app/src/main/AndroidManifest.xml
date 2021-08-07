@@ -10,8 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Newsly">
         <activity android:name=".ui.main.view.SignInActivity"></activity>
+        <activity android:name=".ui.main.view.OnboardingActivity"></activity>
+        <activity android:name=".ui.main.view.SignUpActivity" />
         <activity android:name=".ui.main.view.base.BaseActivity" />
-        <activity android:name=".ui.main.view.SignUpActivity">
+        <activity android:name=".ui.main.view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
