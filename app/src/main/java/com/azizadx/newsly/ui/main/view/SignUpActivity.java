@@ -12,6 +12,8 @@ import androidx.appcompat.content.res.AppCompatResources;
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.ui.main.view.base.BaseActivity;
 
+import java.util.regex.Pattern;
+
 public class SignUpActivity extends BaseActivity implements View.OnTouchListener  {
     private EditText username, email, pass, repeatPass;
 
@@ -34,10 +36,35 @@ public class SignUpActivity extends BaseActivity implements View.OnTouchListener
     }
 
     private void buttonSignUp() {
-        if (username.getText().toString().isEmpty() || email.getText().toString().isEmpty()
-                || pass.getText().toString().isEmpty()
-                || repeatPass.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Empty Input", Toast.LENGTH_SHORT).show();
+        String usernameText = username.getText().toString();
+        String emailText = email.getText().toString();
+        String passText = pass.getText().toString();
+        String repeatPassText = repeatPass.getText().toString();
+
+        // Empty Input
+        if (usernameText.isEmpty() || emailText.isEmpty()
+                || passText.isEmpty()
+                || repeatPassText.isEmpty()) {
+            if (usernameText.isEmpty()) username.setError("Username is required");
+            if (emailText.isEmpty()) email.setError("Email is required");
+            if (passText.isEmpty()) pass.setError("Password is required");
+            if (repeatPassText.isEmpty()) repeatPass.setError("Repeat Password is required");
+            return;
+        }
+
+        // Check Email Pattern, Password Length, Password Match
+       final Pattern VALID_EMAIL_ADDRESS_REGEX =
+                Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$",
+                        Pattern.CASE_INSENSITIVE);
+        if (!passText.equals(repeatPassText) ||
+                !VALID_EMAIL_ADDRESS_REGEX.matcher(emailText).find() ||
+                passText.length() < 6) {
+            if (!VALID_EMAIL_ADDRESS_REGEX.matcher(emailText).find())
+                email.setError("Invalid Email.");
+            if (!passText.equals(repeatPassText))
+                repeatPass.setError("Please make sure your password match.");
+            if (passText.length() < 6)
+                pass.setError("Password must be >= 6 characters.");
             return;
         }
         signUp(email.getText().toString(), pass.getText().toString());
