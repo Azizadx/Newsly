@@ -9,7 +9,7 @@
 
     <com.denzcoskun.imageslider.ImageSlider
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         app:auto_cycle="true"
         app:delay="0"
         app:period="2000"
@@ -20,42 +20,38 @@
 
     </com.denzcoskun.imageslider.ImageSlider>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_black"
             android:text="First to know"
+            android:paddingBottom="30dp"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.578">
+            android:layout_below="@id/slider"
+            android:layout_centerInParent="true"
+            >
 
 
         </TextView>
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:gravity="center_horizontal"
+            android:paddingBottom="60dp"
             android:text="All news in one place, be the \n  first to know latest news"
             android:textColor="@color/primary_light_green"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.117">
+            android:layout_below="@id/textView"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+
+            >
 
         </TextView>
 
@@ -63,22 +59,20 @@
         <Button
             android:id="@+id/nextButton"
             style="@style/green_button"
-            android:layout_width="358dp"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/rounded_button"
             android:text="Next"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.528">
+            android:layout_marginStart="40dp"
+           android:layout_below="@id/textView2"
+            android:layout_centerInParent="true"
+            >
 
 
         </Button>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
