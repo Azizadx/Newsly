@@ -9,16 +9,20 @@
         android:roundIcon="@mipmap/newsl_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Newsly">
-        <activity android:name=".ui.main.view.base.BaseActivity"/>
-        <activity android:name=".ui.main.view.SignUpActivity">
+        <activity android:name=".ui.main.view.BottomNavBar"></activity>
+        <activity android:name=".ui.main.view.BookmarksEmptyStateActivity" />
+       <!-- <activity android:name=".ui.main.view.WelcomeScreenActivity" />-->
+        <activity android:name=".ui.main.view.OnboardingActivity" />
+        <activity android:name=".ui.main.view.SignUpActivity" />
+        <activity android:name=".ui.main.view.base.BaseActivity" />
+        <activity android:name=".ui.main.view.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.view.MainActivity">
-        </activity>
+        <activity android:name=".ui.main.view.MainActivity" />
     </application>
 
 </manifest>

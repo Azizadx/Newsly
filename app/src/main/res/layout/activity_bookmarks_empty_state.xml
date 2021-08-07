@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.view.BookmarksEmptyStateActivity"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left"
+        android:text="Bookmarks"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        >
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18sp"
+        android:layout_marginBottom="40dp"
+        android:text="Saved articles to the library"
+        android:textColor="@color/primary_light_green"
+        android:layout_below="@id/textView3">
+
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text=" You haven't saved any articles \n yet. Start reading and \n bookmarking them now"
+        android:textColor="@color/primary_light_green"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"
+        >
+
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_saved_articles"
+        android:layout_centerInParent="true"
+        ></ImageView>
+
+
+    <include
+        android:id="@+id/bN"
+        layout="@layout/activity_bottom_nav_bar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+    </include>
+
+
+</RelativeLayout>
