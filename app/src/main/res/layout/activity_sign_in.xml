@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/black"
     android:padding="20dp"
-    tools:context=".ui.main.view.SignUpActivity">
+    tools:context=".ui.main.view.SignInActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -55,32 +55,29 @@
         android:text="@string/sign_in"/>
 
 
-    <View
-        android:layout_width="40dp"
-        android:layout_height="40dp" />
-
     <TextView
-        android:layout_width="17dp"
-        android:layout_height="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/or"
         android:textSize="64px"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:gravity="center"
         android:textColor="@android:color/darker_gray"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
-    <View
-        android:layout_width="40dp"
-        android:layout_height="40dp"/>
 
     <Button
-        android:id="@+id/buttonGoogle"
-        style="@style/transparent_button"
-        android:background="@drawable/rounded_button"
+        android:id="@+id/btnGoogle"
+        style="@style/g_button"
+        android:drawableLeft="@drawable/ic_google"
         android:text="@string/google_sign_in"/>
 
+
     <Button
-        android:id="@+id/buttonFb"
-        style="@style/transparent_button"
-        android:background="@drawable/rounded_button"
+        android:id="@+id/btnFb"
+        style="@style/g_button"
+        android:drawableLeft="@drawable/ic_google"
         android:text="@string/fb_sign_in"/>
 
     <LinearLayout

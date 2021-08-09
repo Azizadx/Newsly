@@ -15,11 +15,13 @@ import android.widget.Toast;
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.ui.main.view.base.BaseActivity;
 
+import java.util.regex.Pattern;
+
 public class SignInActivity extends BaseActivity implements View.OnTouchListener {
     private EditText email, pass;
 
-    //Button btnGoogleSignin = findViewById(R.id.buttonGoogle);
-    //Button btnFbSignin = findViewById(R.id.buttonFb);
+    //Button btnGoogleSignin = findViewById(R.id.btnGoogle);
+    //Button btnFbSignin = findViewById(R.id.btnFb);
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -38,9 +40,22 @@ public class SignInActivity extends BaseActivity implements View.OnTouchListener
     }
 
     private void buttonSignIn() {
-        if ( email.getText().toString().isEmpty()
-                || pass.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Empty Input", Toast.LENGTH_SHORT).show();
+        String emailText = email.getText().toString();
+        String passText = pass.getText().toString();
+
+        // Empty Input
+        if (emailText.isEmpty() || passText.isEmpty()) {
+            if (emailText.isEmpty()) email.setError("Email is required");
+            if (passText.isEmpty()) pass.setError("Password is required");
+            return;
+        }
+        // Check Email Pattern and Validity/Existence(already signed up before)?
+        final Pattern VALID_EMAIL_ADDRESS_REGEX =
+                Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$",
+                        Pattern.CASE_INSENSITIVE);
+        if (!VALID_EMAIL_ADDRESS_REGEX.matcher(emailText).find()) {
+            if (!VALID_EMAIL_ADDRESS_REGEX.matcher(emailText).find())
+                email.setError("Invalid Email.");
             return;
         }
         signIn(email.getText().toString(), pass.getText().toString());
