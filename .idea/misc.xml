@@ -8,12 +8,18 @@
         <entry key="app/src/main/res/drawable/tab_background.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_bookmarks_empty_state.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/activity_bottom_nav_bar.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_business.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout/activity_entertainment.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/activity_general.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_health.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/activity_layout_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/activity_scinence.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="1.0" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/activity_sport.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout/activity_technology.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/artical.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/general.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/layout_item.xml" value="0.18802083333333333" />
