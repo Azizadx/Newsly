@@ -1,18 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.view.MainActivity">
+    tools:context=".ui.main.view.MainActivity"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10mm"
+        android:layout_marginLeft="2mm"
+        android:textStyle="bold"
+        android:id="@+id/browsertxt"
+        ></TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Discover things of this world"
+        android:textColor="@color/primary_light_green"
+        android:layout_marginTop="2mm"
+        android:layout_marginLeft="2mm"
+        android:textStyle="normal"
+        android:layout_below="@+id/browsertxt"
+        android:id="@+id/subtiteltxt"
+        ></TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabinclude"
+        android:layout_below="@+id/subtiteltxt"
+        app:tabTextColor="@color/light_purple"
+        app:tabSelectedTextColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:tabMode="scrollable"
+        app:tabIndicator="@drawable/tab_background"
+        >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="General"
+            android:id="@+id/general"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            android:id="@+id/business"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="technology"
+            android:id="@+id/technology"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="entertainment"
+            android:id="@+id/entertainment"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="health"
+            android:id="@+id/health"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="scinence"
+            android:id="@+id/scinence"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sports"
+            android:id="@+id/sports"
+            />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabinclude"
+        android:layout_marginTop="0dp"
+        android:id="@+id/fragmentcontainer"
+        >
+    </androidx.viewpager.widget.ViewPager>
+
+    <include
+        android:id="@+id/bN"
+        layout="@layout/activity_bottom_nav_bar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+    </include>
+
+
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.azizadx.newsly.R;
+import com.azizadx.newsly.ui.main.view.MainActivity;
 import com.azizadx.newsly.ui.main.view.SignUpActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -38,7 +39,7 @@ public class BaseActivity extends AppCompatActivity {
     public Intent authUser() {
 //        return auth == null ? new Intent (this, SignInActivity.class)
 //                : new Intent (this, HomeFeedActivity.class);
-        return new Intent (this, SignUpActivity.class);
+        return new Intent (this, MainActivity.class);
     }
 
     public void signUp(String email, String password) {

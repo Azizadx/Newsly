@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/non_selected_tab_background.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/drawable/selected_tab_background.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/drawable/tab_background.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/activity_bookmarks_empty_state.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/activity_bottom_nav_bar.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_general.xml" value="0.2563405797101449" />
+        <entry key="app/src/main/res/layout/activity_layout_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/layout/artical.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/general.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/layout_item.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/menu/item_menu.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
