@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@android:color/holo_blue_bright"
-        android:state_selected="true"/>
-    <item android:drawable="@android:color/holo_green_dark"
-        android:state_selected="false"/>
+    <item android:drawable="@drawable/selected_tab_background"
+        android:state_selected="true">
+
+    </item>
+
+    <item android:drawable="@drawable/non_selected_tab_background">
+
+    </item>
 </selector>

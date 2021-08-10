@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- NEWSLY COLORS-->
+    <color name="light_black">#141414</color>
     <color name="primary_green">#52DF82</color>
     <color name="primary_light_green">#96D794</color>
    <color name="primary_white">#FFFFFFFF</color>

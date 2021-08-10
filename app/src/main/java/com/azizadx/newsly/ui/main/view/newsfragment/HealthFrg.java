@@ -51,7 +51,7 @@ public class HealthFrg extends Fragment {
         ApiUtitl.getApiInterface().getCategoryNews(country,category,100,api).enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
-                System.out.println(response);
+//                System.out.println(response);
                 if (response.isSuccessful()) {
                     modelArrayList.addAll(response.body().getArticles());
                     adaptor.notifyDataSetChanged();

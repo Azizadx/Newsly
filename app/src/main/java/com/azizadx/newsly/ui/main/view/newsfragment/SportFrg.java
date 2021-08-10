@@ -49,15 +49,13 @@ public class SportFrg extends Fragment {
         ApiUtitl.getApiInterface().getCategoryNews(country,category,100,api).enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
-                try {
+
                     if (response.isSuccessful()) {
                         modelArrayList.addAll(response.body().getArticles());
                         adaptor.notifyDataSetChanged();
                     }
-                }
-                catch (Exception e){
 
-                }
+
 
             }
 

@@ -31,16 +31,31 @@
         android:id="@+id/subtiteltxt"
         ></TextView>
 
+
+<!--        <androidx.appcompat.widget.SearchView-->
+<!--            android:id="@+id/search_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/subtiteltxt"-->
+<!--            android:layout_marginTop="2mm"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:background="@color/white"-->
+<!--           app:searchHintIcon="@color/light_purple"-->
+<!--            app:queryBackground="@color/light_purple"-->
+<!--            />--> will comeback later for it
+
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tabinclude"
+        app:tabBackground="@drawable/tab_background"
+        android:layout_marginTop="2mm"
         android:layout_below="@+id/subtiteltxt"
         app:tabTextColor="@color/light_purple"
-        app:tabSelectedTextColor="@color/white"
+        app:tabSelectedTextColor="@color/black"
         android:backgroundTint="@color/black"
         app:tabMode="scrollable"
-        app:tabIndicator="@drawable/tab_background"
         >
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"

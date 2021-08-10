@@ -3,16 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/card_selector.xml" value="0.21296296296296297" />
+        <entry key="app/src/main/res/drawable/ic_apps.xml" value="0.11203703703703703" />
+        <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.11203703703703703" />
+        <entry key="app/src/main/res/drawable/ic_saved_articles.xml" value="0.11203703703703703" />
+        <entry key="app/src/main/res/drawable/item_selector.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/non_selected_tab_background.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.2125" />
         <entry key="app/src/main/res/drawable/selected_tab_background.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/drawable/tab_background.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/activity_artical_page.xml" value="0.15881458966565348" />
         <entry key="app/src/main/res/layout/activity_bookmarks_empty_state.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/activity_bottom_nav_bar.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_business.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/activity_entertainment.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/activity_general.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/activity_health.xml" value="0.21197916666666666" />
-        <entry key="app/src/main/res/layout/activity_layout_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_layout_item.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/activity_scinence.xml" value="0.21197916666666666" />
@@ -23,6 +30,7 @@
         <entry key="app/src/main/res/layout/artical.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/general.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/layout_item.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/network_config.xml" value="0.12182971014492754" />
         <entry key="app/src/main/res/menu/item_menu.xml" value="0.2" />
       </map>
     </option>
