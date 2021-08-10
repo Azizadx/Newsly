@@ -35,6 +35,8 @@ public class SignInActivity extends BaseActivity implements View.OnTouchListener
         Button signInButton = findViewById(R.id.buttonSignIn);
         signInButton.setOnClickListener(view -> buttonSignIn());
 
+        //btnGoogleSignin.setOnClickListener(view -> signInWithGoogleAuth());
+
         TextView signUpTextView = findViewById(R.id.textSignUp);
         signUpTextView.setOnTouchListener(this);
     }
