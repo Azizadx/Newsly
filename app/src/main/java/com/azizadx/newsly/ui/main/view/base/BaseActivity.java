@@ -5,12 +5,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.ui.main.view.MainActivity;
 
+import com.azizadx.newsly.ui.main.view.OnboardingActivity;
+import com.azizadx.newsly.ui.main.view.SignInActivity;
 import com.azizadx.newsly.ui.main.view.SignUpActivity;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -30,26 +33,38 @@ public class BaseActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private GoogleSignInClient googleSignInClient;
     private static final int RC_SIGN_IN = 200;
+    private static final String PREFS_NAME = "FIRST_TIME";
+    private static SharedPreferences prefs;
+    private static SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         auth = FirebaseAuth.getInstance();
+        prefs= getPreferences(MODE_PRIVATE);
     }
 
     public Intent authUser() {
-//        return auth == null ? new Intent (this, SignInActivity.class)
-//                : new Intent (this, HomeFeedActivity.class);
-        return new Intent (this, MainActivity.class);
+        return auth.getCurrentUser() == null ? firstTimeOpeningApp()
+                : new Intent (this, MainActivity.class);
+    }
+
+    public Intent firstTimeOpeningApp() {
+        if (prefs.getBoolean(PREFS_NAME, true)) {
+            editor = prefs.edit();
+            editor.putBoolean(PREFS_NAME, false);
+            editor.apply();
+            return new Intent(this, OnboardingActivity.class);
+        }
+        return new Intent (this, SignInActivity.class);
     }
 
     public void signUp(String email, String password) {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
             if(task.isSuccessful()) {
-                Toast.makeText(BaseActivity.this, "Added User", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(this, .class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
             } else {
                 Toast.makeText(getApplicationContext(), "Failed: " + task.getException(), Toast.LENGTH_SHORT).show();
             }
@@ -60,9 +75,8 @@ public class BaseActivity extends AppCompatActivity {
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if(task.isSuccessful()) {
-                        Toast.makeText(BaseActivity.this, "SignedIn User", Toast.LENGTH_SHORT).show();
-//                           Intent intent = new Intent(this, .class);
-//                           startActivity(intent);
+                           Intent intent = new Intent(this, MainActivity.class);
+                           startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "Failed: " + task.getException(), Toast.LENGTH_SHORT).show();
                     }
@@ -93,12 +107,11 @@ public class BaseActivity extends AppCompatActivity {
                 try {
                     // Google Sign In was successful, authenticate with Firebase
                     GoogleSignInAccount account = task.getResult(ApiException.class);
-//                    Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
                     firebaseAuthWithGoogle(account.getIdToken());
                 } catch (ApiException e) {
                     // Google Sign In failed, update UI appropriately
                     Toast.makeText(getApplicationContext(), "Google sign in failed", Toast.LENGTH_SHORT).show();
-                }    
+                }
             } else {
                 Toast.makeText(getApplicationContext(), task.getException().toString(), Toast.LENGTH_SHORT).show();
             }
@@ -113,10 +126,8 @@ public class BaseActivity extends AppCompatActivity {
                         // Sign in success, update UI with the signed-in user's information
                         FirebaseUser user = auth.getCurrentUser();
                         auth.updateCurrentUser(user);
-
-
-                        Toast.makeText(getApplicationContext(), "signIn successful", Toast.LENGTH_SHORT).show();
-
+                        Intent intent = new Intent(this, MainActivity.class);
+                        startActivity(intent);
                     } else {
                         // If sign in fails, display a message to the user.
                         Toast.makeText(getApplicationContext(), "signInWithCredential:failure", Toast.LENGTH_SHORT).show();
