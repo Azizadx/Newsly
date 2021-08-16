@@ -1,13 +1,20 @@
 <resources>
     <string name="app_name">Newsly</string>
     <string name="welcome_to_newsly">Welcome To Newsly 👋</string>
+    <string name="welcome_Back">Welcome Back 👋</string>
     <string name="Signup_subtitle">Hello, I guess you are new around here. You can start using the application after sign up.</string>
+    <string name="Signin_subtitle">You can continue where you left off by logging in.</string>
     <string name="username">Username</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
+    <string name="or">or</string>
     <string name="repeat_password">Repeat Password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="google_sign_in">Sign In with Google</string>
+    <string name="fb_sign_in">Sign In with Facebook</string>
     <string name="sign_in">Sign In</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <!--string name="default_web_client_id">683309486759-ge2dile1n5qu5vtsfvaedu0js8c1nnb3.apps.googleusercontent.com</string-->
 
 </resources>

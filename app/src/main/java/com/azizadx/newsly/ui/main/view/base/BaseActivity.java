@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.ui.main.view.MainActivity;
+
 import com.azizadx.newsly.ui.main.view.SignUpActivity;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -111,7 +113,10 @@ public class BaseActivity extends AppCompatActivity {
                         // Sign in success, update UI with the signed-in user's information
                         FirebaseUser user = auth.getCurrentUser();
                         auth.updateCurrentUser(user);
+
+
                         Toast.makeText(getApplicationContext(), "signIn successful", Toast.LENGTH_SHORT).show();
+
                     } else {
                         // If sign in fails, display a message to the user.
                         Toast.makeText(getApplicationContext(), "signInWithCredential:failure", Toast.LENGTH_SHORT).show();
