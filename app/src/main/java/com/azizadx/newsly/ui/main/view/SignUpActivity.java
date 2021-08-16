@@ -71,9 +71,9 @@ public class SignUpActivity extends BaseActivity implements View.OnTouchListener
     }
 
     private void clickSignIn() {
-        Toast.makeText(getApplicationContext(), "Go To SignIn", Toast.LENGTH_SHORT).show();
-//        Intent intent = new Intent(this, SignInActivity.class);
-//        startActivity(intent);
+       // Toast.makeText(getApplicationContext(), "Go To SignIn", Toast.LENGTH_SHORT).show();
+      Intent intent = new Intent(this, SignInActivity.class);
+      startActivity(intent);
     }
 
     @SuppressLint("ClickableViewAccessibility")
