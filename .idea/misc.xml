@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.11481481481481481" />
         <entry key="app/src/main/res/drawable/card_selector.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/ic_apps.xml" value="0.11203703703703703" />
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.11203703703703703" />
@@ -13,6 +14,7 @@
         <entry key="app/src/main/res/drawable/selected_tab_background.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/drawable/tab_background.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_artical_page.xml" value="0.15881458966565348" />
+        <entry key="app/src/main/res/layout/activity_article_page.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_bookmarks_empty_state.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/layout/activity_bottom_nav_bar.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_business.xml" value="0.21197916666666666" />
@@ -36,5 +38,5 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
