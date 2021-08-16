@@ -38,10 +38,10 @@ public class OnboardingActivity extends AppCompatActivity {
            public void onClick(View v) {
 
               //  Intent intent = new Intent (OnboardingActivity.this, WelcomeScreenActivity.class);
-              //  Intent intent = new Intent (OnboardingActivity.this, SignUpActivity.class);
+                Intent intent = new Intent (OnboardingActivity.this, SignUpActivity.class);
 
                 //comment this out later
-                Intent intent = new Intent (OnboardingActivity.this, BookmarksEmptyStateActivity.class);
+               // Intent intent = new Intent (OnboardingActivity.this, BookmarksEmptyStateActivity.class);
 
                 startActivity(intent);
             }
