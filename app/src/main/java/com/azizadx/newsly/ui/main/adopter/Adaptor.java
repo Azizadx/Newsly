@@ -2,6 +2,7 @@ package com.azizadx.newsly.ui.main.adopter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.data.model.NewsModel;
+import com.azizadx.newsly.ui.main.view.ArticlePage;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -41,8 +43,8 @@ public class Adaptor extends RecyclerView.Adapter<Adaptor.ViewHolder> {
             @Override
             public void onClick(View view) {
                 System.out.println("content is selected");
-//                Intent intent = new Intent(context,webView.class);
-//                intent.putExtra("url",modelClassArrayList.get(position).getUrl());
+                Intent intent = new Intent(context, ArticlePage.class);
+                intent.putExtra("url",modelClassArrayList.get(position).getUrl());
             }
         });
 

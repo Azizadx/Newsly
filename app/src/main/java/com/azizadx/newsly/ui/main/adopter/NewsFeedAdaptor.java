@@ -2,31 +2,32 @@ package com.azizadx.newsly.ui.main.adopter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.data.model.NewsFeedModel;
+import com.azizadx.newsly.data.model.NewsModel;
+import com.azizadx.newsly.ui.main.view.ArticlePage;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.model.GlideUrl;
-import com.bumptech.glide.load.model.LazyHeaders;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHolder> {
     Context context ;
+    Context context2;
     ArrayList<NewsFeedModel> modelClassArrayList;
-
+    ArrayList<NewsModel> singleModel;
+    Adaptor adaptor2;
+    NewsFeedAdaptor adaptor ;
     public NewsFeedAdaptor(Context context, ArrayList<NewsFeedModel> modelClassArrayList) {
         this.context = context;
         this.modelClassArrayList = modelClassArrayList;
@@ -41,19 +42,17 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("content is selected");
-//                Intent intent = new Intent(context,webView.class);
-//                intent.putExtra("url",modelClassArrayList.get(position).getUrl());
+                System.out.println("content is selected from MainActivity"+modelClassArrayList.get(position).getUrl());
+                Intent intent = new Intent(context, ArticlePage.class);
+                intent.putExtra("url",modelClassArrayList.get(position).getUrl());
+//                startActivity(intent);
             }
         });
-//        GlideUrl url = new GlideUrl(, new LazyHeaders.Builder()
-//                .addHeader("User-Agent", WebSettings.getDefaultUserAgent(context))
-//                .build());
 
 
         holder.mheading.setText(modelClassArrayList.get(position).getTitle());
