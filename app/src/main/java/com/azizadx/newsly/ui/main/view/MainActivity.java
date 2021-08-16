@@ -1,15 +1,19 @@
 package com.azizadx.newsly.ui.main.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.MenuItem;
 
 import com.azizadx.newsly.R;
 import com.azizadx.newsly.data.respository.PageAdapter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
@@ -64,5 +68,27 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navbarr);
+
+        bottomNavigationView.setSelectedItemId(R.id.bookmarks);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.bookmarks:
+                        startActivity(new Intent(getApplicationContext()
+                                , BookmarksEmptyStateActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.home:
+                        return true;
+
+                }
+                return false;
+            }
+
+        });
     }
+
 }
