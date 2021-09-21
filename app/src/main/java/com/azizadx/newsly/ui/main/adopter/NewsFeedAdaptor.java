@@ -71,7 +71,7 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("content is selected from MainActivity"+modelClassArrayList.get(position).getUrl());
+//                System.out.println("content is selected from MainActivity"+modelClassArrayList.get(position).getUrl());
                 Intent intent = new Intent(context, ArticlePage.class);
                 intent.putExtra("url",nm.getUrl());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
@@ -103,8 +103,11 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
 
 
         public String  categoryName () {
-          cat = ((MainActivity)context).setCategory().toString();
-          return cat;
+//            System.out.println(();
+//            cat = ((MainActivity)context).setCategory().toString();
+
+//          cat = ((MainActivity)context).setCategory().toString();
+          return((MainActivity)context).setCategory();
 //            Toast.makeText(context.getApplicationContext(), "Category: " +cat, Toast.LENGTH_SHORT).show();
         }
 
@@ -121,14 +124,14 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
             bookmarkbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    categoryName();
+                  cat = categoryName();
 
                     //params to store in db -article name, url and img url
 int position =getAdapterPosition();
             NewsFeedModel nmm = modelClassArrayList.get(position);
             article_name = nmm.getTitle();
             article_image = nmm.getUrlToImage();
-             String article_url=  iurl.getText().toString();
+             String article_url=  url.getText().toString();
              String article_cat =  cat;
 
                     if(clicked) {

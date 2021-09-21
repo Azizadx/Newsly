@@ -59,8 +59,9 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.View
             public void onClick(View view) {
 
                 //fix intent - url is passing / why webview isn't getting it?
+                System.out.println("Position"+ a);
                 Intent intent = new Intent(context, ArticlePage.class);
-                intent.putExtra("url",a.getUrl());
+                intent.putExtra("url",a.getUrlToImage());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                 context.startActivity(intent);
             }
