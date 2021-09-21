@@ -136,7 +136,7 @@ int position =getAdapterPosition();
 
                     if(clicked) {
                         clicked = false;
-                        Toast.makeText(context.getApplicationContext(), "Bookmarked!", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context.getApplicationContext(), "url?!" + article_url, Toast.LENGTH_SHORT).show();
                         BookmarksDB db = new BookmarksDB(context.getApplicationContext());
                         db.insertToDb(article_name,article_url,article_image,article_cat);
                         bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in);
