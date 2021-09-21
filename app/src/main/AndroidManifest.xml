@@ -23,6 +23,7 @@
         <activity android:name=".ui.main.view.SignUpActivity" />
         <activity android:name=".ui.main.view.base.BaseActivity" />
         <activity android:name=".ui.main.view.SplashScreenActivity">
+<!--        <activity android:name=".ui.main.view.MainActivity" >-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,6 +31,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.main.view.MainActivity" />
+<!--    <activity android:name=".ui.main.view.SplashScreenActivity"/>-->
+        <activity android:name=".ui.main.view.ArticlePage"/>
     </application>
 
 </manifest>
