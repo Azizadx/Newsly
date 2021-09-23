@@ -3,7 +3,9 @@ package com.azizadx.newsly.ui.main.adopter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,8 +48,6 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
     Adaptor adaptor2;
     NewsFeedAdaptor adaptor ;
 
-
-
     public NewsFeedAdaptor(Context context, ArrayList<NewsFeedModel> modelClassArrayList) {
         this.context = context;
         this.modelClassArrayList = modelClassArrayList;
@@ -56,8 +56,6 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
     @NonNull
     @Override
     public NewsFeedAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.activity_layout_item,null,false);
         return new ViewHolder(view);
@@ -85,6 +83,7 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
         holder.mheading.setText(modelClassArrayList.get(position).getTitle());
         Glide.with(context)
                 .load(imageUrl).into(holder.imageView);
+
     }
     
     @Override
@@ -104,9 +103,9 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
 
         public String  categoryName () {
           cat = ((MainActivity)context).setCategory().toString();
-          return cat;
-//            Toast.makeText(context.getApplicationContext(), "Category: " +cat, Toast.LENGTH_SHORT).show();
-        }
+            return cat;
+               }
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -123,7 +122,7 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
                 public void onClick(View view) {
                     categoryName();
 
-                    //params to store in db -article name, url and img url
+                    //parameters to store in db -article name, url and img url
 int position =getAdapterPosition();
             NewsFeedModel nmm = modelClassArrayList.get(position);
             article_name = nmm.getTitle();
@@ -133,19 +132,21 @@ int position =getAdapterPosition();
 
                     if(clicked) {
                         clicked = false;
-//                        Toast.makeText(context.getApplicationContext(), "url?!" + article_url, Toast.LENGTH_SHORT).show();
                         BookmarksDB db = new BookmarksDB(context.getApplicationContext());
                         db.insertToDb(article_name,article_url,article_image,article_cat);
                         bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in);
                         notifyDataSetChanged();
                         db.close();
-                        //not saving from General category - figure out why
+
+                        //crashes if you bookmark from General tab first
+                        //doesn't crash when you save from a different tab first then come to general. Why?
+                        // check changes made in GeneralFrg and revert to commented out version if it's not helpful
+
                     } else
                     {
                         clicked = true;
-
-                        Toast.makeText(context.getApplicationContext(), "Unbookmarked!", Toast.LENGTH_SHORT).show();
                         bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
+
                         //call delete
                         BookmarksDB db = new BookmarksDB(context.getApplicationContext());
                         db.Delete(article_name);

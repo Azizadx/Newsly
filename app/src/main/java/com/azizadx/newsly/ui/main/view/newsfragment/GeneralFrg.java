@@ -25,7 +25,9 @@ import retrofit2.Response;
 
 public class GeneralFrg extends Fragment {
 
+
     String country = "us";
+    String category = "general";
     String api = "d8874f9df1164bc3af8101018531cedf";
     ArrayList<NewsFeedModel> modelArrayList;
     NewsFeedAdaptor adaptor ;
@@ -46,9 +48,8 @@ public class GeneralFrg extends Fragment {
 
         return  v;
     }
-
     private void findNews() {
-        ApiUtitl.getApiInterface().getNews(country,100,api).enqueue(new Callback<MainNews>() {
+        ApiUtitl.getApiInterface().getCategoryNews(country,category,100,api).enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
 //                System.out.println(response);
@@ -61,8 +62,52 @@ public class GeneralFrg extends Fragment {
             @Override
             public void onFailure(Call<MainNews> call, Throwable t) {
 
-
             }
         });
     }
+
 }
+
+
+
+
+//    String country = "us";
+//String api = "d8874f9df1164bc3af8101018531cedf";
+//    ArrayList<NewsFeedModel> modelArrayList;
+//    NewsFeedAdaptor adaptor ;
+//    private RecyclerView recyclerViewofgeneral;
+//
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//
+//        View v = inflater.inflate(R.layout.activity_general,null);
+//        recyclerViewofgeneral = v.findViewById(R.id.rcviewofgeneral);
+//        modelArrayList = new ArrayList<>();
+//        recyclerViewofgeneral.setLayoutManager(new LinearLayoutManager(getContext()));
+//        adaptor = new NewsFeedAdaptor(getContext(),modelArrayList);
+//        recyclerViewofgeneral.setAdapter(adaptor);
+//
+//        findNews();
+//
+//        return  v;
+//    }
+//
+//    private void findNews() {
+//        ApiUtitl.getApiInterface().getNews(country,100,api).enqueue(new Callback<MainNews>() {
+//            @Override
+//            public void onResponse(Call<MainNews> call, Response<MainNews> response) {
+////                System.out.println(response);
+//                if (response.isSuccessful()) {
+//                    modelArrayList.addAll(response.body().getArticles());
+//                    adaptor.notifyDataSetChanged();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<MainNews> call, Throwable t) {
+//
+//
+//            }
+//        });
+//    }

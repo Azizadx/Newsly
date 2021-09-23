@@ -51,14 +51,14 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.View
     public void onBindViewHolder(@NonNull BookmarksAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         SavedNewsModel a = svdnewmodel.get(position);
-        String imageUrl = a.getUrlToImage();
+        String imageUrl = a.getUrl();
         String c = a.getCat();
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-               //IT WORKS BISHHHHH
+            //fixed
                 Intent intent = new Intent(context, ArticlePage.class);
                 intent.putExtra("url",a.getUrlToImage());
 
@@ -109,7 +109,7 @@ String iU, rU;
                     rU= svnm.getUrl();
                     if(clicked) {
                         clicked = true;
-//                        bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
+//   bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
                         //add delete query call here
                         BookmarksDB db = new BookmarksDB(context.getApplicationContext());
                         Cursor c = db.getAll();
