@@ -48,10 +48,13 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
     Adaptor adaptor2;
     NewsFeedAdaptor adaptor ;
 
+    int newBackgroundPos = -1;
+
     public NewsFeedAdaptor(Context context, ArrayList<NewsFeedModel> modelClassArrayList) {
         this.context = context;
         this.modelClassArrayList = modelClassArrayList;
     }
+
 
     @NonNull
     @Override
@@ -64,6 +67,7 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
+//        prefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
         final NewsFeedModel nm = modelClassArrayList.get(position);
         String imageUrl = nm.getUrlToImage();
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +87,20 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
         holder.mheading.setText(modelClassArrayList.get(position).getTitle());
         Glide.with(context)
                 .load(imageUrl).into(holder.imageView);
+
+        //button state -currently happening to all the buttons in the recycler view - not just a specific button
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
+        String state = pref.getString(String.valueOf(position)+"pressed", "no"); //default
+
+        if(state.equals("yes")){
+            holder.bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in);
+        //how to apply to specific button only?? -position?
+//            holder.bookmarkbtn.setEnabled(false);
+        }else {
+            holder.bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
+
+        }
+
 
     }
     
@@ -122,6 +140,7 @@ public class NewsFeedAdaptor extends RecyclerView.Adapter<NewsFeedAdaptor.ViewHo
                 public void onClick(View view) {
                     categoryName();
 
+
                     //parameters to store in db -article name, url and img url
 int position =getAdapterPosition();
             NewsFeedModel nmm = modelClassArrayList.get(position);
@@ -134,10 +153,14 @@ int position =getAdapterPosition();
                         clicked = false;
                         BookmarksDB db = new BookmarksDB(context.getApplicationContext());
                         db.insertToDb(article_name,article_url,article_image,article_cat);
-                        bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in);
+
+                              //saving button state
+                        SharedPreferences.Editor editor= PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext()).edit();
+            editor.putString(String.valueOf(position)+ "pressed", "yes");
+            editor.apply();
+            bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in);
                         notifyDataSetChanged();
                         db.close();
-
                         //crashes if you bookmark from General tab first
                         //doesn't crash when you save from a different tab first then come to general. Why?
                         // check changes made in GeneralFrg and revert to commented out version if it's not helpful
@@ -145,11 +168,17 @@ int position =getAdapterPosition();
                     } else
                     {
                         clicked = true;
-                        bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
-
+//                        bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
                         //call delete
                         BookmarksDB db = new BookmarksDB(context.getApplicationContext());
                         db.Delete(article_name);
+
+                        //button state
+                        SharedPreferences.Editor editor= PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext()).edit();
+                        editor.putString(String.valueOf(position)+ "pressed", "no");
+                        editor.apply();
+                        bookmarkbtn.setImageResource(R.drawable.ic_bookmark_turned_in_not);
+
                         notifyDataSetChanged();
                     }
                 }
