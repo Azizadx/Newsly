@@ -17,14 +17,17 @@
         <activity android:name=".ui.main.view.OnboardingActivity" />
         <activity android:name=".ui.main.view.SignUpActivity" />
         <activity android:name=".ui.main.view.base.BaseActivity" />
-        <activity android:name=".ui.main.view.SplashScreenActivity">
+<!--        <activity android:name=".ui.main.view.SplashScreenActivity">-->
+        <activity android:name=".ui.main.view.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.view.MainActivity" />
+<!--        <activity android:name=".ui.main.view.MainActivity" />-->
+    <activity android:name=".ui.main.view.SplashScreenActivity"/>
+        <activity android:name=".ui.main.view.ArticlePage"/>
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

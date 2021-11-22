@@ -62,12 +62,26 @@
                 android:background="@color/light_black"
                 android:gravity="right"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_bookmark">
+                android:src="@drawable/ic_bookmark_turned_in_not">
 
             </ImageButton>
 
-        </LinearLayout>
 
+
+        </LinearLayout>
+        <TextView
+            android:gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="0dp"
+            android:id="@+id/imgurl"/>
+
+        <TextView
+            android:gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="0dp"
+            android:id="@+id/url"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

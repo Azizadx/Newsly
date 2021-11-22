@@ -12,22 +12,21 @@
             android:gravity="center_vertical"
             android:id="@+id/rlayout"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sepecific news"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textAlignment="center"/>
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Sepecific news"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textAlignment="center"/>-->
 
         </RelativeLayout>
 
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/webview"
+        android:id="@+id/webView"
         android:layout_below="@+id/rlayout">
-
 
     </WebView>
 

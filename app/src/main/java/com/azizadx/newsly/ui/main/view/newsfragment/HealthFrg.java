@@ -26,7 +26,8 @@ public class HealthFrg extends Fragment {
 
     String country = "us";
     String category = "health";
-    String api = "d8874f9df1164bc3af8101018531cedf";
+//    String api = "d8874f9df1164bc3af8101018531cedf";
+    String api = "b9a091232c6f4c85a1ec1008e741de12";
     ArrayList<NewsFeedModel> modelArrayList;
     NewsFeedAdaptor adaptor ;
     private RecyclerView recyclerViewofhealth;

@@ -23,6 +23,5 @@
     <string name="change_password">Change Password</string>
     <string name="privacy">Privacy</string>
     <string name="profile_avatar">Profile Avatar</string>
-    <!--string name="default_web_client_id">683309486759-ge2dile1n5qu5vtsfvaedu0js8c1nnb3.apps.googleusercontent.com</string-->
-
+  
 </resources>
