@@ -2,8 +2,10 @@ package com.azizadx.newsly.ui.main.view.base;
 
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -43,6 +45,16 @@ public class BaseActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         prefs= getPreferences(MODE_PRIVATE);
+    }
+
+    public FirebaseUser getAuthUser() {
+        if (auth.getCurrentUser() == null) {
+            Intent intent = new Intent(this, SignInActivity.class);
+            startActivity(intent);
+            return null;
+        } else {
+            return auth.getCurrentUser();
+        }
     }
 
     public Intent authUser() {
@@ -133,5 +145,23 @@ public class BaseActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "signInWithCredential:failure", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    public void signOut() {
+        new AlertDialog.Builder(this)
+                .setTitle("Sign Out")
+                .setMessage("Are you sure you want to sign out?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        auth.signOut();
+                        Intent intent = new Intent(BaseActivity.this, SignInActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .create()
+                .show();
     }
 }
