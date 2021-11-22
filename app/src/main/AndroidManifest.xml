@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.azizadx.newsly">
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/newsl_logo"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Newsly">
-
-        <activity android:name=".ui.main.view.SignInActivity"></activity>
-        <activity android:name=".ui.main.view.BottomNavBar"></activity>
-        <activity android:name=".ui.main.view.BookmarksEmptyStateActivity" />
-       <!-- <activity android:name=".ui.main.view.WelcomeScreenActivity" />-->
+        android:theme="@style/Theme.Newsly"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.main.view.ProfileActivity"></activity>
+        <activity android:name=".ui.main.view.SignInActivity" />
+        <activity android:name=".ui.main.view.BottomNavBar" />
+        <activity android:name=".ui.main.view.BookmarksEmptyStateActivity" /> <!-- <activity android:name=".ui.main.view.WelcomeScreenActivity" /> -->
         <activity android:name=".ui.main.view.OnboardingActivity" />
         <activity android:name=".ui.main.view.SignUpActivity" />
         <activity android:name=".ui.main.view.base.BaseActivity" />
@@ -34,5 +29,10 @@
     <activity android:name=".ui.main.view.SplashScreenActivity"/>
         <activity android:name=".ui.main.view.ArticlePage"/>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

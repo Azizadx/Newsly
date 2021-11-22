@@ -60,7 +60,11 @@ public class BookmarksEmptyStateActivity extends AppCompatActivity {
                         return true;
                     case R.id.bookmarks:
                         return true;
-
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext()
+                                , ProfileActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                 }
                 return false;
             }
