@@ -17,7 +17,7 @@ Is news app that build using android and firebase with sqlite as local database 
 
 ## Getting Started
 
-**Follow the following setps to run project in local machine **
+**Follow the following setps to run project in local machine**
 
 
 To get a local copy up and running follow these simple example steps.
@@ -41,22 +41,14 @@ To get a local copy up and running follow these simple example steps.
 
 ### The final looks 😍
 
-* Signup page
-<br>
-  <img src="./Screenshots/sc3.png" width="300" height="690">
-<br>
 * Main page with different categories
 <br>
-  <img src="./Screenshots/sc5.png" width="300" height="690">
+  <img src="./Screenshots/sc5.png" width="400" height="790">
  <br>
 * News in webview 
 <br>
-  <img src="./Screenshots/sc8.png" width="300" height="690">
+  <img src="./Screenshots/sc8.png" width="400" height="790">
  <br> 
-* Profile page
-<br>
-  <img src="./Screenshots/sc10.png" width="300" height="690">
- <br>
 
 
 ## Authors
