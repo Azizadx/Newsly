@@ -39,43 +39,24 @@ To get a local copy up and running follow these simple example steps.
 ![Alt Text](https://media.giphy.com/media/laUY2MuoktHPy/giphy.gif)
 
 
-### Final result
-* Intro pages
-<br>
-  <img src="./Screenshots/sc1.png" width="300" height="690">
-
-<br>
+### The final looks 😍
 
 * Signup page
 <br>
   <img src="./Screenshots/sc3.png" width="300" height="690">
 <br>
-
-* Login page
-<br>
- <img src="./Screenshots/sc4.png" width="300" height="690">
- <br>
- 
 * Main page with different categories
 <br>
   <img src="./Screenshots/sc5.png" width="300" height="690">
  <br>
- 
 * News in webview 
 <br>
   <img src="./Screenshots/sc8.png" width="300" height="690">
- <br>
-  
+ <br> 
 * Profile page
 <br>
   <img src="./Screenshots/sc10.png" width="300" height="690">
  <br>
- 
-* Change password
-<br>
-  <img src="./Screenshots/sc11.png" width="300" height="690">
-<br>
-
 
 
 ## Authors
