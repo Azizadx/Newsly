@@ -41,23 +41,40 @@ To get a local copy up and running follow these simple example steps.
 
 ### Final result
 * Intro pages
- - ![screenshot](./Screenshots/sc1.png)
- - ![screenshot](./Screenshots/sc2.png)
+<br>
+  <img src="./Screenshots/sc1.png" width="300" height="690">
+
+<br>
+
 * Signup page
- - ![screenshot](./Screenshots/sc3.png)
+<br>
+  <img src="./Screenshots/sc3.png" width="300" height="690">
+<br>
+
 * Login page
- - ![screenshot](./Screenshots/sc4.png)
+<br>
+ <img src="./Screenshots/sc4.png" width="300" height="690">
+ <br>
+ 
 * Main page with different categories
- - ![screenshot](./Screenshots/sc5.png)
- - ![screenshot](./Screenshots/sc6.png)
- - ![screenshot](./Screenshots/sc7.png)
+<br>
+  <img src="./Screenshots/sc5.png" width="300" height="690">
+ <br>
+ 
 * News in webview 
- - ![screenshot](./Screenshots/sc8.png)
- - ![screenshot](./Screenshots/sc9.png)
+<br>
+  <img src="./Screenshots/sc8.png" width="300" height="690">
+ <br>
+  
 * Profile page
- - ![screenshot](./Screenshots/sc10.png)
+<br>
+  <img src="./Screenshots/sc10.png" width="300" height="690">
+ <br>
+ 
 * Change password
- - ![screenshot](./Screenshots/sc7.png)
+<br>
+  <img src="./Screenshots/sc11.png" width="300" height="690">
+<br>
 
 
 
@@ -65,19 +82,19 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Nasrallah**
 
-- GitHub: [@githubhandle](https://github.com/Azizadx)
+- GitHub: [@Azizadx](https://github.com/Azizadx)
 
 👤 **Mika**
 
-- GitHub: [@githubhandle](https://github.com/mikatakashi)
+- GitHub: [@mikatakashi](https://github.com/mikatakashi)
   
 👤 **Meryem**
 
-- GitHub: [@githubhandle](https://github.com/meryem00)
+- GitHub: [@meryem00](https://github.com/meryem00)
   
 👤 **Mekdedi**
 
-- GitHub: [@githubhandle](https://github.com/mekedi-mkt)
+- GitHub: [@mekedi-mkt](https://github.com/mekedi-mkt)
 
 
  ## Acknowledgments 🙏
@@ -92,7 +109,7 @@ To get a local copy up and running follow these simple example steps.
 ## Show your support
 - if you want to help to get jobs
   
-![Alt Text](https://media.giphy.com/media/3o6Zt7mutmbv76m0ko/giphy.gif)
+![Alt Text](https://media.giphy.com/media/GTO6zNnYr5Wv0p8gAT/giphy.gif)
 
 ## 📝 License
 
