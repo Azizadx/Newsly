@@ -80,7 +80,7 @@ To get a local copy up and running follow these simple example steps.
 
 
 ## Show your support
-- if you want to help to get jobs
+- if you want to help us get jobs
   
 ![Alt Text](https://media.giphy.com/media/GTO6zNnYr5Wv0p8gAT/giphy.gif)
 
